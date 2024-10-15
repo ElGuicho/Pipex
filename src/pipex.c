@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 13:59:13 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/10/03 16:57:23 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/10/15 18:28:38 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ void	child(char **argv, int *p_fd, char **env)
 void	parent(char **argv, int *p_fd, char **env)
 {
 	int		fd;
+	int		status;
 
+	waitpid(-1, &status, 0);
 	fd = open_file(argv[4], 1);
 	dup2(fd, 1);
 	dup2(p_fd[0], 0);
