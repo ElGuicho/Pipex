@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 17:08:32 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/10/03 16:57:04 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/12/05 15:46:04 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdio.h>
 # include <sys/types.h>
 # include <sys/wait.h>
-# include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <stdlib.h>

@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:21:30 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/10/15 16:43:39 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/12/05 16:23:17 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ int	open_file(char *file, int in_or_out)
 	if (in_or_out == 1)
 		ret = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0777);
 	if (ret == -1)
-		exit(0);
+	{
+		ft_printf("the file %s couldn't be opened\n", file);
+		exit(1);
+	}
 	return (ret);
 }
 
