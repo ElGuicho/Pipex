@@ -6,7 +6,7 @@
 /*   By: gmunoz <gmunoz@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 14:21:30 by gmunoz            #+#    #+#             */
-/*   Updated: 2024/12/05 16:23:17 by gmunoz           ###   ########.fr       */
+/*   Updated: 2024/12/10 20:17:59 by gmunoz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int	open_file(char *file, int in_or_out)
 	int	ret;
 
 	if (in_or_out == 0)
-		ret = open(file, O_RDONLY, 0777);
+		ret = open(file, O_RDONLY);
 	if (in_or_out == 1)
 		ret = open(file, O_WRONLY | O_CREAT | O_TRUNC, 0777);
 	if (ret == -1)
 	{
-		ft_printf("the file %s couldn't be opened\n", file);
-		exit(1);
+		ft_printf("pipex: the file %s couldn't be opened\n", file);
+		exit(0);
 	}
 	return (ret);
 }
